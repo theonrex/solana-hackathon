@@ -35,12 +35,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   // initialise all the wallets you want to use
   const wallets = useMemo(
     () => [
-      new PhantomWalletAdapter(),
+
       // new GlowWalletAdapter(),
       // new SlopeWalletAdapter(),
-      // new SolflareWalletAdapter({ solNetwork }),
-      new TorusWalletAdapter(),
-      new LedgerWalletAdapter(),
+      new SolflareWalletAdapter(),
       // new SolletExtensionWalletAdapter(),
       // new SolletWalletAdapter(),
     ],
