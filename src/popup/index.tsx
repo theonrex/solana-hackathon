@@ -91,14 +91,7 @@ function Home() {
     window.open("popup.html", "_blank");
   };
 
-  const handleOpenSolfareWallet = () => {
-  
-    // Open a new popup window with the Phantom Wallet extension installed
-    chrome.windows.create({
-      url: "chrome-extension://bhhhlbepdkbapadjdnnojkbgioiodbic/wallet.html#/portfolio",
-      type: "popup",
-    });
-  };
+
 
   // you can use Mainnet, Devnet or Testnet here
   const solNetwork = WalletAdapterNetwork.Mainnet;
@@ -106,10 +99,9 @@ function Home() {
   // initialise all the wallets you want to use
   const wallets = useMemo(
     () => [
-      new PhantomWalletAdapter(),
       // new GlowWalletAdapter(),
       // new SlopeWalletAdapter(),
-      // new SolflareWalletAdapter({ solNetwork }),
+      new SolflareWalletAdapter(),
       new TorusWalletAdapter(),
       new LedgerWalletAdapter(),
       // new SolletExtensionWalletAdapter(),
@@ -178,7 +170,7 @@ function Home() {
                         lightning-fast Solana blockchain.
                       </p>
                       <div className={styles.WalletMultiButton_btn}>
-                      <button onClick={handleOpenSolfareWallet}>Open Solfare Wallet</button>
+                        <WalletMultiButton />
                       </div>
                     </div>
                   )}
