@@ -5,16 +5,44 @@
   -webkit-box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 19px 3px rgba(42, 0, 45, 0.75);
+  background: linear-gradient(37deg, #001024, #036ddb 48%, #00d4ff);
 
   backdrop-filter: blur(7px) saturate(200%);
   -webkit-backdrop-filter: blur(7px) saturate(200%);
   background-color: rgba(17, 25, 40, 0.23);
   padding: 20px;
   text-align: center;
-  background: linear-gradient(to top, #000000, #29002b);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 100%;
-  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.multiWalletDiv {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+}
+.main form input {
+  width: 100%;
+}
+
+.multiWalletDiv h1 {
+  font-size: 2em;
+  color: white;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.multiWalletDiv .WalletMultiButton_btn {
+  margin-bottom: 3em;
+}
+
+.multiWalletDiv p {
+  color: white;
+  text-align: center;
+  width: 80%;
+  margin: 2em auto;
 }
 
 .RegisterForm {
@@ -31,8 +59,32 @@
 
 .RegisterForm input:focus {
   outline: none; /* Remove the default focus outline */
-  border-color: #fff700; /* Set the border color when input is focused */
+  border-color: #036ddb; /* Set the border color when input is focused */
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Add a box shadow when input is focused */
+}
+
+.main button {
+  font-size: 1em;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 2px solid var(--green);
+  background: #001024;
+  background: linear-gradient(37deg, #001024, #036ddb 48%, #00d4ff);
+  box-shadow: inset 0 0 10px rgba(43, 0, 103, 0.4),
+    0 0 9px 3px rgba(27, 253, 156, 0.1);
+  color: white;
+}
+
+.main .error {
+  color: red;
+}
+
+.main button:hover {
+  color: #000000;
 }
 
 .RegisterForm header {
@@ -107,7 +159,7 @@
 
 .Vault input:focus {
   outline: none; /* Remove the default focus outline */
-  border-color: #fff700; /* Set the border color when input is focused */
+  border-color: #036ddb; /* Set the border color when input is focused */
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Add a box shadow when input is focused */
 }
 
@@ -156,6 +208,23 @@
   font-family: "Kanit", sans-serif;
 }
 
+.multiWalletDiv h1 {
+  font-size: 2em;
+  color: white;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.multiWalletDiv .WalletMultiButton_btn {
+  margin-bottom: 3em;
+}
+
+.multiWalletDiv p {
+  color: white;
+  text-align: center;
+  width: 80%;
+  margin: 2em auto;
+}
 /* Styling for the input container */
 .input-container {
   flex-direction: column;
@@ -176,41 +245,10 @@
 }
 
 .popup_input:focus {
-  border-color: #fff700; /* Change the border color on focus */
+  border-color: #036ddb; /* Change the border color on focus */
 }
 
 /* Styling for the button */
-
-.button {
-  font-size: 15px;
-  padding: 0.7em 2.7em;
-  letter-spacing: 0.06em;
-  position: relative;
-  font-family: inherit;
-  border-radius: 0.6em;
-  overflow: hidden;
-  transition: all 0.3s;
-  line-height: 1.4em;
-  border: 2px solid var(--green);
-  background: linear-gradient(
-    to right,
-    rgb(255, 0, 136) 1%,
-    rgba(140, 27, 253, 0.761) 40%,
-    rgb(255, 0, 136) 60%,
-    rgba(140, 27, 253, 0.761) 100%
-  );
-  color: var(--green);
-  box-shadow: inset 0 0 10px rgba(43, 0, 103, 0.4),
-    0 0 9px 3px rgba(27, 253, 156, 0.1);
-  width: 50%;
-  color: white;
-}
-
-.button:hover {
-  color: #000000;
-  box-shadow: inset 0 0 10px rgba(253, 27, 132, 0.6),
-    0 0 9px 3px rgba(27, 253, 156, 0.2);
-}
 
 /* button:before {
   content: "";
@@ -263,8 +301,8 @@
 /* Media query for screens up to 600px wide */
 @media screen and (max-width: 600px) {
   .popup_container {
-    width: 300px;
-    height: auto;
+    width: 350px;
+    height: 500px;
     position: unset;
     transform: unset;
   }

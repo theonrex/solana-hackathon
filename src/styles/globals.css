@@ -31,6 +31,6 @@ input {
     0,
     0
   ); /* This sets the background color to fully transparent */
-  border: 1px solid #fff700; /* You can add border styles if needed */
+  border: 1px solid #00a3e8; /* You can add border styles if needed */
   color: #fff; /* Set text color to contrast with the background */
 }
